@@ -46,7 +46,10 @@ h2 {
   margin-top: 0;
 }
 
-.post {
+.post, 
+.login-form,
+.signup-form
+{
   border: 5px solid black;
   margin: 10px 40px;
 }
@@ -67,6 +70,8 @@ h2 {
   margin-right: 10px;
 }
 
-.content {
+.content, 
+.form-content
+{
   margin-left: 10px;
 }
