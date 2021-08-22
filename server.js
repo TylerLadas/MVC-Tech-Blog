@@ -8,6 +8,9 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 const routes = require('./controllers')
 
+// import helper functions
+const helpers = require('./utils/helpers');
+
 const app = express();
 
 // set up port
@@ -29,7 +32,7 @@ const sess = {
 app.use(session(sess));
 
 // set up template engine
-const hbs = exphbs.create({});
+const hbs = exphbs.create({ helpers });
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
