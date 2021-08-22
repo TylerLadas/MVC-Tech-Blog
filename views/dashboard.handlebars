@@ -1,0 +1,30 @@
+<h2>Your Dashboard</h2>
+
+<button id="newPost">+ New Post</button>
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <article class="post">
+      <div class="title">
+        <a href="/post/{{post.id}}">
+          <h2>{{title}}</h2>
+        </a>
+        <span>by {{post.user.username}} on
+        {{format_date post.created_at}}
+        |
+        <a href="/post/{{post.id}}">{{comments.length}} {{format_plural "comment" post.comments.length}}</a></span>
+      </div>
+      <div class="content">
+        <p>{{content}}</p>
+      </div>
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </article>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/create-post.js"></script>

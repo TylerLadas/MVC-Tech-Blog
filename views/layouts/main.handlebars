@@ -13,7 +13,9 @@
         <header>
             <nav>
                 <a href="/">Home</a>
+                {{#if loggedIn}}
                 <a href="/dashboard">Dashboard</a>
+                {{/if}}
                 {{#unless loggedIn}}
                 <a href="/login">Login</a>
                 {{/unless}}
