@@ -1,11 +1,10 @@
-<h2>Your Dashboard</h2>
+<h2 class="dash-title">Your Dashboard</h2>
 
 <button id="newPost">+ New Post</button>
 
 {{#if posts.length}}
+{{!-- <h2 class="your-posts">Your Posts</h2> --}}
 <section>
-  <h2>Your Posts</h2>
-  <ol>
     {{#each posts as |post|}}
     <article class="post">
       <div class="title">
@@ -23,7 +22,6 @@
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </article>
     {{/each}}
-  </ol>
 </section>
 {{/if}}
 
