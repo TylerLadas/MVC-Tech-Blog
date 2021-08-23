@@ -1,19 +1,21 @@
+<h2 class="dash-title">Your Dashboard</h2>
+
 <article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
-  <h2>
-    Edit Post
-  </h2>
+  {{!-- <a href="/dashboard"> &larr; Back to dashboard</a> --}}
   <form class="edit-post-form">
     <div>
+    <h2 class="title">Edit Post</h2>
+    </div>
+    <div class="form-content">
       <label for="post-title">Title</label><br>
       <input name="post-title" type="text" value="{{post.title}}" />  
     </div>
-    <div>
+    <div class="form-content">
       <label for="content-area">Content</label><br>
-      <textarea name="content-area" id="content-area">{{post.content}}</textarea>
+      <textarea class="content-body" name="content-area" id="content-area">{{post.content}}</textarea>
     </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
+    <button class="btn" type="submit">Save post</button>
+    <button type="button" class="delete-post-btn btn">Delete post</button>
   </form>
 </article>
 

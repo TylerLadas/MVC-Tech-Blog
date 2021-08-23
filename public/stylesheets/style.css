@@ -80,14 +80,16 @@ a {
 .signup-form,
 .comment-form,
 .comment,
-.new-post-form
+.new-post-form,
+.edit-post-form
 {
   border: 5px solid black;
   margin: 10px 40px;
 }
 
 .signup-link,
-.login-link {
+.login-link,
+.edit-link {
   color: blue;
 }
 
